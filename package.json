@@ -1,0 +1,14 @@
+{
+  "name": "auxiliari-situalis",
+  "version": "1.0.0",
+  "description": "Conjunto de diferentes clases y métodos de uso ocasional en situaciones concretas.",
+  "main": "index.js",
+  "scripts": {
+    "index": "node index.js",
+    "analizador": "node Analizador/test.js",
+    "aoc": "node AOC/test.js",
+    "traza": "node Traza/test.js"
+  },
+  "author": "Antonio González de los Ríos",
+  "license": "ISC"
+}

@@ -1,0 +1,4 @@
+atributo1;atributo2;atributo3;x
+Obj1 Atr1;Obj1 Atr2;Obj1 Atr3;x
+Obj2 Atr1;Obj2 Atr2;Obj2 Atr3;x
+Obj3 Atr1;Obj3 Atr2;Obj3 Atr3;x
