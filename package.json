@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "index": "node index.js",
-    "analizador": "node Analizador/test.js",
-    "aoc": "node AOC/test.js",
-    "traza": "node Traza/test.js"
+    "analizador": "node src/Analizador/test.js",
+    "aoc": "node src/AOC/test.js",
+	"cuentagotas": "echo Esta prueba debe hacerse desde un navegador.",
+    "traza": "node src/Traza/test.js"
   },
   "author": "Antonio González de los Ríos",
   "license": "ISC"
