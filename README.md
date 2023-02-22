@@ -14,5 +14,8 @@
 ## Cuentagotas
  La función `verDatos()` permite obtener información del color y las coordenadas en las que se ha realizado un evento de pulsación (Click) sobre un elemento imagen de HTML. Otras funciones útiles incluidas en **Cuentagotas.js** son `verCoordenadas()` y `verPosicion()` para obtener datos relativos a la ubicación del elemento en la ventana.
 
+## Creación de Elementos
+ La función `crea()` encapsula métodos de manipulación del DOM de forma que resulte más sencillo crear referencias a elementos en código sin necesidad de utilizar librerías más pesadas como JQuery.
+
 ## Traza
  Un método simple para el trazado de datos durante la depuración. Destaca el dato introducido entre dos filas en la consola y añade una marca de tiempo de cuándo se produjo el LOG.
