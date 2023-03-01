@@ -1,12 +1,11 @@
 /**Función para crear referencias a elementos a través de la manipulación del DOM.
  * @param {string} etiqueta Etiqueta HTML del elemento.
- * @param {{ attributes: Object<string, string>, children: HTMLElement[], class: string, events: Object<string, Function>, html: string, text: string, value: string }} config Parámetros del elemento.
+ * @param {{ attributes: Object<string, string>, children: HTMLElement[], class: string, events: Object<string, Function>, html: string, style: Object<string, string> | string, text: string, value: string }} config Parámetros del elemento.
  * @return {HTMLElement} Una referencia a HTMLObjectElement.
  */
 function crea(etiqueta, config) {
-	console.log(etiqueta, config);
-	const elemento = document.createElement(etiqueta);
 	if (config) {
+		const elemento = document.createElement(etiqueta);
 		if (typeof config === 'string') elemento.innerHTML = config;
 		else {
 			if (config.attributes) {
@@ -32,7 +31,25 @@ function crea(etiqueta, config) {
 					elemento.addEventListener(key, config.events[key]);
 				}
 			}
+			if (config.style) {
+				if (typeof config.style === 'string') {
+					elemento.style = config.style;
+				}
+				else {
+					let styleLine = '';
+					const styles = Object.keys(config.style);
+					for (let i = 0; i < styles.length; i++) {
+						const style = styles[i];
+						styleLine += style + ':' + config.style[style] + ';';
+					}
+					elemento.setAttribute('style', styleLine);
+				}
+			}
 		}
+		return elemento;
 	}
-	return elemento;
+	else {
+		const elemento = document.createTextNode(etiqueta);
+		return elemento;
+	}
 }

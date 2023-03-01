@@ -70,6 +70,27 @@ window.addEventListener('load', () => {
 								crea('td', 'html / text'),
 								crea('td', 'Las opciones html y text, equivalen a innerHTML e innerText. Al incluir ambas o especificar la configuración como un texto, prevalecerá <b>html</b>')
 							]
+						}),
+						crea('tr', {
+							children: [
+								crea('td', 'style'),
+								crea('td', { children: [
+									crea('span', {
+										html: 'La opción style permite añadir estilos en línea como string o como objeto',
+										style: { 'font-family': 'arial' },
+									})
+								] })
+							]
+						}),
+						crea('tr', {
+							children: [
+								crea('td', 'Text Node'),
+								crea('td', {
+									children: [
+										crea('Al no especificar configuración, el primer parámetro generará un nodo de texto')
+									]
+								})
+							]
 						})
 					],
 				}),
