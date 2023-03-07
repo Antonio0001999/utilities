@@ -11,11 +11,14 @@
  Cada fila añadida generará un objeto que contendrá tantos atributos como columnas se hayan especificado en la primera fila.
  La clase AOC incluye un método para convertir objetos de JavaScript a este formato de filas y columnas.
 
-## Cuentagotas
- La función `verDatos()` permite obtener información del color y las coordenadas en las que se ha realizado un evento de pulsación (Click) sobre un elemento imagen de HTML. Otras funciones útiles incluidas en **Cuentagotas.js** son `verCoordenadas()` y `verPosicion()` para obtener datos relativos a la ubicación del elemento en la ventana.
+## Callback a Promesa
+ Una función que encapsula los métodos de la librería nativa de node `http` para devolver el resultado en forma de promesa.
 
 ## Creación de Elementos
  La función `crea()` encapsula métodos de manipulación del DOM de forma que resulte más sencillo crear referencias a elementos en código sin necesidad de utilizar librerías más pesadas como JQuery.
+
+## Cuentagotas
+ La función `verDatos()` permite obtener información del color y las coordenadas en las que se ha realizado un evento de pulsación (Click) sobre un elemento imagen de HTML. Otras funciones útiles incluidas en **Cuentagotas.js** son `verCoordenadas()` y `verPosicion()` para obtener datos relativos a la ubicación del elemento en la ventana.
 
 ## Traza
  Un método simple para el trazado de datos durante la depuración. Destaca el dato introducido entre dos filas en la consola y añade una marca de tiempo de cuándo se produjo el LOG.
