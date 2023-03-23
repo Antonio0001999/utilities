@@ -22,3 +22,6 @@
 
 ## Traza
  Un método simple para el trazado de datos durante la depuración. Destaca el dato introducido entre dos filas en la consola y añade una marca de tiempo de cuándo se produjo el LOG.
+
+## Transponedor de Tablas
+ Una función para cambiar las posiciones de filas y columnas en una tabla de HTML. No abarca casos en los que se unen celdas a través de `rowspan` o `colspan`.
