@@ -20,8 +20,11 @@
 ## Cuentagotas
  La función `verDatos()` permite obtener información del color y las coordenadas en las que se ha realizado un evento de pulsación (Click) sobre un elemento imagen de HTML. Otras funciones útiles incluidas en **Cuentagotas.js** son `verCoordenadas()` y `verPosicion()` para obtener datos relativos a la ubicación del elemento en la ventana.
 
-## Traza
- Un método simple para el trazado de datos durante la depuración. Destaca el dato introducido entre dos filas en la consola y añade una marca de tiempo de cuándo se produjo el LOG.
+## Status Codes
+ Un Objeto Literal documentado con una estructura organizada para todos los códigos de respuesta HTTP.
 
 ## Transponedor de Tablas
  Una función para cambiar las posiciones de filas y columnas en una tabla de HTML. No abarca casos en los que se unen celdas a través de `rowspan` o `colspan`.
+
+## Traza
+ Un método simple para el trazado de datos durante la depuración. Destaca el dato introducido entre dos filas en la consola y añade una marca de tiempo de cuándo se produjo el LOG.
