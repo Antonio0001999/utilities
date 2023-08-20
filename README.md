@@ -23,6 +23,9 @@
 ## Status Codes
  Un Objeto Literal documentado con una estructura organizada para todos los códigos de respuesta HTTP.
 
+## StyledConsole
+ Una clase con métodos útiles para el formateo de mensajes de la consola.
+
 ## Transponedor de Tablas
  Una función para cambiar las posiciones de filas y columnas en una tabla de HTML. No abarca casos en los que se unen celdas a través de `rowspan` o `colspan`.
 

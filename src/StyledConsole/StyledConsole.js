@@ -7,7 +7,6 @@
  */
 
 //#region GLOBAL VARIABLES
-let joiner = '';
 const consoleStyle = {
 	none: '\x1b[0m',
 	bold: '\x1b[1m',
