@@ -25,4 +25,4 @@ function interpolate(string, search, options) {
 	return interpolation(string);
 }
 
-module.exports = interpolate;
+globalThis.interpolate = interpolate;

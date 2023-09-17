@@ -1,4 +1,4 @@
-const interpolate = require('./Interpolator');
+require('./Interpolator');
 
 let text1 = `With interpolate function is easy to add an HTML tag between a string, even if the tag is repeated.`;
 let result1 = interpolate(text1, 'tag', { pre: '<b>', pos: '</b>' });
