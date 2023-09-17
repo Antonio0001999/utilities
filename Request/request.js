@@ -1,9 +1,11 @@
-const http = require('http');
+const https = require('https');
+
+/**@type {https.RequestOptions}*/
 const defaultOptions = { body: undefined, headers: undefined, method: 'GET', timeout: 5000 };
 
-/**
+/**Makes a request through native Node https.
  * @param {string} url 
- * @param {Object<string, any>} options
+ * @param {https.RequestOptions} options
  */
 function request(url, options = defaultOptions) {
 	const mixedOptions = {...defaultOptions, ...options};
@@ -22,7 +24,7 @@ function request(url, options = defaultOptions) {
 				timeout: mixedOptions.timeout
 			};
 
-			let req = http.request(options, (res) => {
+			let req = https.request(options, (res) => {
 				let response = [];
 				res.on('data', (chunk) => response.push(chunk));
 				res.on('end', () => {

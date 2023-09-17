@@ -1,4 +1,5 @@
 /**Structure with the five groups of HTTP response Codes.
+ * 
  * All data comes from MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
  */
 const Status = {

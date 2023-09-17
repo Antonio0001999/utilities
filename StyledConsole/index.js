@@ -1,9 +1,9 @@
-const styled = require('./StyledConsole');
+require('./StyledConsole');
 
 styled.assert(true, ['Asserted text', 'txtMagenta']);
 
 const text = styled.create(['Cursive gray text', 'cursive txtGray']);
-console.log(text);
+console.log(text.result);
 
 styled.debug(['Debug text', 'lineThrough']);
 styled.error(['Error text', 'txtRed']);

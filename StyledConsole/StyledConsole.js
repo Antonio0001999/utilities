@@ -36,12 +36,15 @@ const consoleStyle = {
 
 class StyledConsole {
 	/**Constructor for StyledConsole class.
-	 * @param {string} joiner 
-	 * @param {LineStyle} defaultStyle 
+	 * @param {string} joiner
+	 * @param {LineStyle} defaultStyle
 	 */
 	constructor(joiner = '', defaultStyle = '') {
 		this.joiner = joiner;
-		const style = defaultStyle.split(' ').map(name => consoleStyle[name]).join('');
+		const style = defaultStyle
+			.split(' ')
+			.map((name) => consoleStyle[name])
+			.join('');
 		this.defaultStyle = style;
 	}
 
@@ -53,7 +56,9 @@ class StyledConsole {
 	 * ```
 	 */
 	assert(condition = false, ...lines) {
-		console.assert(condition, this.create(...lines));
+		const { result, text } = this.create(...lines);
+		console.assert(condition, result);
+		return text;
 	}
 
 	/**Creates string with Console Style
@@ -64,23 +69,29 @@ class StyledConsole {
 	 */
 	create(...lines) {
 		const result = [];
+		const text = [];
 
 		for (let i = 0; i < lines.length; i++) {
 			const line = lines[i];
-			let newLine = '';
+			let styledLine = '';
 			if (typeof line === 'string') {
-				newLine = this.defaultStyle + line;
+				styledLine = this.defaultStyle + line;
+				text.push(line);
 			} else {
-				const text = line[0] || '';
+				const lineString = line[0] || '';
 				const lineStyle = line[1] ? line[1].split(' ') : [];
 				const style = lineStyle.length > 0 ? lineStyle.map((name) => consoleStyle[name]).join('') : this.defaultStyle;
-				newLine = style + text + consoleStyle.none;
+				styledLine = style + lineString + consoleStyle.none;
+				text.push(lineString);
 			}
 
-			result.push(newLine);
+			result.push(styledLine);
 		}
 
-		return result.join(this.joiner);
+		return {
+			result: result.join(this.joiner),
+			text: text.join(this.joiner)
+		};
 	}
 
 	/**Prints to console at Debug level.
@@ -90,7 +101,9 @@ class StyledConsole {
 	 * ```
 	 */
 	debug(...lines) {
-		console.debug(this.create(...lines));
+		const { result, text } = this.create(...lines);
+		console.debug(result);
+		return text;
 	}
 
 	/**Prints to console at Error level
@@ -100,7 +113,9 @@ class StyledConsole {
 	 * ```
 	 */
 	error(...lines) {
-		console.error(this.create(...lines));
+		const { result, text } = this.create(...lines);
+		console.error(result);
+		return text;
 	}
 
 	/**Prints to console at Info level
@@ -110,7 +125,9 @@ class StyledConsole {
 	 * ```
 	 */
 	info(...lines) {
-		console.info(this.create(...lines));
+		const { result, text } = this.create(...lines);
+		console.info(result);
+		return text;
 	}
 
 	/**Default log to console function.
@@ -120,7 +137,9 @@ class StyledConsole {
 	 * ```
 	 */
 	log(...lines) {
-		console.log(this.create(...lines));
+		const { result, text } = this.create(...lines);
+		console.log(result);
+		return text;
 	}
 
 	/**Sets default style to apply on lines without styling specifications.
@@ -128,7 +147,7 @@ class StyledConsole {
 	 */
 	setDefaultStyle(style) {
 		const styles = style.split(' ');
-		this.defaultStyle = styles.map(name => consoleStyle[name]).join('');
+		this.defaultStyle = styles.map((name) => consoleStyle[name]).join('');
 	}
 
 	/**Sets the global joiner that will be used to join lines at `create` function.
@@ -145,10 +164,12 @@ class StyledConsole {
 	 * ```
 	 */
 	warn(...lines) {
-		console.warn(this.create(...lines));
+		const { result, text } = this.create(...lines);
+		console.warn(result);
+		return text;
 	}
 }
 
 const styled = new StyledConsole('', 'normal');
 
-module.exports = styled;
+globalThis.styled = styled;
