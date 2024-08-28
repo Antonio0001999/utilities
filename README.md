@@ -18,3 +18,4 @@ Everything here is code that you would have eventually written, so, if you find 
 | Request        | Node.js    | The `request()` function is an usage example of node https.                                                       |
 | Status Code    | Both       | `Status` is an object with the documented HTTP Status Codes.                                                      |
 | Styled Console | Both       | The `styled` global instance makes easier to customize console messages.                                          |
+| Translator     | Browser    | The `Translator` Class manages objects with lang namespaces.                                                      |
