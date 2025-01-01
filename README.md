@@ -12,6 +12,7 @@ Everything here is code that you would have eventually written, so, if you find 
 | -------------- | ---------- | ----------------------------------------------------------------------------------------------------------------- |
 | ColorCSS       | Both       | The `generateFilter()` function returns a CSS filter value that can turn any black element into that color.       |
 | Create         | Browser    | The `create()` function encapsulates DOM manipulation methods to create code references to HTMLElements.          |
+| DataSize       | Both       | The `getDataSize()` method gets a number or string and returns its value and unit of measure in Byte Scale.       |
 | Dropper        | Browser    | The `dropper()` function provides the color and coordenates of a MouseEvent on an Element.                        |
 | Interpolator   | Both       | The `interpolate()` function can manipulate a searched part of a string.                                          |
 | ObjectEquals   | Both       | The `objectEquals()` function compares two values recursively, allowing to check equalities on Objects and Arrays |
